@@ -8,6 +8,15 @@
 </head>
 
 <body>
+    <!-- Add this before the table -->
+    <div class="input-container" style="margin: 20px; text-align: center;">
+        <input type="text" id="newCoinInput" placeholder="Enter coin pair (e.g. BTCUSDT)"
+            style="padding: 8px; width: 200px; margin-right: 10px;">
+        <button onclick="addNewCoin()"
+            style="padding: 8px 16px; background-color: #08bbbb; color: white; border: none; cursor: pointer;">
+            Add Coin
+        </button>
+    </div>
     <table class="trello-table">
         <thead>
             <tr>
@@ -436,282 +445,17 @@
                 <td class="liq-short-cell">-</td>
             </tr>
 
-            <!-- Row 7 -->
-            <tr class="calculator-row" data-row="7" data-symbol="DOGEUSDT">
-                <td class="coin-name">DOGEUSDT</td>
-                <td class="price-cell">-</td>
-                <td>
-                    <select class="leverage-select">
-                        <option value="10">10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                        <option value="25">25</option>
-                        <option value="30">30</option>
-                        <option value="35">35</option>
-                        <option value="40">40</option>
-                        <option value="45">45</option>
-                        <option value="50">50</option>
-                    </select>
-                </td>
-                <td>
-                    <select class="account-size-select">
-                        <option value="100">100</option>
-                        <option value="125">125</option>
-                        <option value="150">150</option>
-                        <option value="175">175</option>
-                        <option value="200">200</option>
-                        <option value="225">225</option>
-                        <option value="250">250</option>
-                        <option value="275">275</option>
-                        <option value="300">300</option>
-                        <option value="325">325</option>
-                        <option value="350">350</option>
-                        <option value="375">375</option>
-                        <option value="400">400</option>
-                        <option value="425">425</option>
-                        <option value="450">450</option>
-                        <option value="475">475</option>
-                        <option value="500">500</option>
-                    </select>
-                </td>
-                <td>
-                    <select class="target-profit-select">
-                        <option value="10">10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                        <option value="25">25</option>
-                        <option value="30">30</option>
-                        <option value="35">35</option>
-                        <option value="40">40</option>
-                        <option value="45">45</option>
-                        <option value="50">50</option>
-                        <option value="50">60</option>
-                        <option value="50">70</option>
-                        <option value="50">80</option>
-                        <option value="50">90</option>
-                        <option value="50">100</option>
-                        <option value="50">150</option>
-                        <option value="50">200</option>
-                        <option value="50">300</option>
-                        <option value="50">500</option>
-                    </select>
-                </td>
-                <td class="position-size-cell">-</td>
-                <td class="quantity-cell">-</td>
-                <td class="tg-long-cell">-</td>
-                <td class="liq-long-cell">-</td>
-                <td class="tg-short-cell">-</td>
-                <td class="liq-short-cell">-</td>
-            </tr>
 
-            <!-- Row 8 -->
-            <tr class="calculator-row" data-row="8" data-symbol="DOTUSDT">
-                <td class="coin-name">DOTUSDT</td>
-                <td class="price-cell">-</td>
-                <td>
-                    <select class="leverage-select">
-                        <option value="10">10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                        <option value="25">25</option>
-                        <option value="30">30</option>
-                        <option value="35">35</option>
-                        <option value="40">40</option>
-                        <option value="45">45</option>
-                        <option value="50">50</option>
-                    </select>
-                </td>
-                <td>
-                    <select class="account-size-select">
-                        <option value="100">100</option>
-                        <option value="125">125</option>
-                        <option value="150">150</option>
-                        <option value="175">175</option>
-                        <option value="200">200</option>
-                        <option value="225">225</option>
-                        <option value="250">250</option>
-                        <option value="275">275</option>
-                        <option value="300">300</option>
-                        <option value="325">325</option>
-                        <option value="350">350</option>
-                        <option value="375">375</option>
-                        <option value="400">400</option>
-                        <option value="425">425</option>
-                        <option value="450">450</option>
-                        <option value="475">475</option>
-                        <option value="500">500</option>
-                    </select>
-                </td>
-                <td>
-                    <select class="target-profit-select">
-                        <option value="10">10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                        <option value="25">25</option>
-                        <option value="30">30</option>
-                        <option value="35">35</option>
-                        <option value="40">40</option>
-                        <option value="45">45</option>
-                        <option value="50">50</option>
-                        <option value="50">60</option>
-                        <option value="50">70</option>
-                        <option value="50">80</option>
-                        <option value="50">90</option>
-                        <option value="50">100</option>
-                        <option value="50">150</option>
-                        <option value="50">200</option>
-                        <option value="50">300</option>
-                        <option value="50">500</option>
-                    </select>
-                </td>
-                <td class="position-size-cell">-</td>
-                <td class="quantity-cell">-</td>
-                <td class="tg-long-cell">-</td>
-                <td class="liq-long-cell">-</td>
-                <td class="tg-short-cell">-</td>
-                <td class="liq-short-cell">-</td>
-            </tr>
-
-            <!-- Row 9 -->
-            <tr class="calculator-row" data-row="9" data-symbol="MATICUSDT">
-                <td class="coin-name">MATICUSDT</td>
-                <td class="price-cell">-</td>
-                <td>
-                    <select class="leverage-select">
-                        <option value="10">10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                        <option value="25">25</option>
-                        <option value="30">30</option>
-                        <option value="35">35</option>
-                        <option value="40">40</option>
-                        <option value="45">45</option>
-                        <option value="50">50</option>
-                    </select>
-                </td>
-                <td>
-                    <select class="account-size-select">
-                        <option value="100">100</option>
-                        <option value="125">125</option>
-                        <option value="150">150</option>
-                        <option value="175">175</option>
-                        <option value="200">200</option>
-                        <option value="225">225</option>
-                        <option value="250">250</option>
-                        <option value="275">275</option>
-                        <option value="300">300</option>
-                        <option value="325">325</option>
-                        <option value="350">350</option>
-                        <option value="375">375</option>
-                        <option value="400">400</option>
-                        <option value="425">425</option>
-                        <option value="450">450</option>
-                        <option value="475">475</option>
-                        <option value="500">500</option>
-                    </select>
-                </td>
-                <td>
-                    <select class="target-profit-select">
-                        <option value="10">10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                        <option value="25">25</option>
-                        <option value="30">30</option>
-                        <option value="35">35</option>
-                        <option value="40">40</option>
-                        <option value="45">45</option>
-                        <option value="50">50</option>
-                        <option value="50">60</option>
-                        <option value="50">70</option>
-                        <option value="50">80</option>
-                        <option value="50">90</option>
-                        <option value="50">100</option>
-                        <option value="50">150</option>
-                        <option value="50">200</option>
-                        <option value="50">300</option>
-                        <option value="50">500</option>
-                    </select>
-                </td>
-                <td class="position-size-cell">-</td>
-                <td class="quantity-cell">-</td>
-                <td class="tg-long-cell">-</td>
-                <td class="liq-long-cell">-</td>
-                <td class="tg-short-cell">-</td>
-                <td class="liq-short-cell">-</td>
-            </tr>
-
-            <!-- Row 10 -->
-            <tr class="calculator-row" data-row="10" data-symbol="LTCUSDT">
-                <td class="coin-name">LTCUSDT</td>
-                <td class="price-cell">-</td>
-                <td>
-                    <select class="leverage-select">
-                        <option value="10">10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                        <option value="25">25</option>
-                        <option value="30">30</option>
-                        <option value="35">35</option>
-                        <option value="40">40</option>
-                        <option value="45">45</option>
-                        <option value="50">50</option>
-                    </select>
-                </td>
-                <td>
-                    <select class="account-size-select">
-                        <option value="100">100</option>
-                        <option value="125">125</option>
-                        <option value="150">150</option>
-                        <option value="175">175</option>
-                        <option value="200">200</option>
-                        <option value="225">225</option>
-                        <option value="250">250</option>
-                        <option value="275">275</option>
-                        <option value="300">300</option>
-                        <option value="325">325</option>
-                        <option value="350">350</option>
-                        <option value="375">375</option>
-                        <option value="400">400</option>
-                        <option value="425">425</option>
-                        <option value="450">450</option>
-                        <option value="475">475</option>
-                        <option value="500">500</option>
-                    </select>
-                </td>
-                <td>
-                    <select class="target-profit-select">
-                        <option value="10">10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                        <option value="25">25</option>
-                        <option value="30">30</option>
-                        <option value="35">35</option>
-                        <option value="40">40</option>
-                        <option value="45">45</option>
-                        <option value="50">50</option>
-                        <option value="50">60</option>
-                        <option value="50">70</option>
-                        <option value="50">80</option>
-                        <option value="50">90</option>
-                        <option value="50">100</option>
-                        <option value="50">150</option>
-                        <option value="50">200</option>
-                        <option value="50">300</option>
-                        <option value="50">500</option>
-                    </select>
-                </td>
-                <td class="position-size-cell">-</td>
-                <td class="quantity-cell">-</td>
-                <td class="tg-long-cell">-</td>
-                <td class="liq-long-cell">-</td>
-                <td class="tg-short-cell">-</td>
-                <td class="liq-short-cell">-</td>
-            </tr>
         </tbody>
     </table>
+    <!-- Add this JavaScript just before the existing script -->
+
+    <!------------old code for adding new coin row-->
 
     <script>
+
         (function () {
+
             const SERVER = 'http://localhost:3000';
             document.querySelectorAll('.calculator-row').forEach(row => initializeRow(row));
 
@@ -812,7 +556,208 @@
                 setInterval(updatePrice, 10000);
             }
         })();
+
+        function addNewCoin() {
+
+            const input = document.getElementById('newCoinInput');
+            const symbol = input.value.toUpperCase().trim();
+
+            // Validate input
+            if (!symbol.endsWith('USDT')) {
+                alert('Please enter a valid USDT pair (e.g. BTCUSDT)');
+                return;
+            }
+
+            // Check if row already exists
+            const existingRow = document.querySelector(`[data-symbol="${symbol}"]`);
+            if (existingRow) {
+                alert('This coin pair already exists in the table');
+                return;
+            }
+
+            // Get the next row number
+            const tbody = document.getElementById('calculatorRows');
+            const nextRow = tbody.children.length + 1;
+
+            // Create new row
+            const tr = document.createElement('tr');
+            tr.className = 'calculator-row';
+            tr.dataset.row = nextRow;
+            tr.dataset.symbol = symbol;
+
+            // Row HTML structure with all columns
+            tr.innerHTML = `
+        <td class="coin-name">${symbol}</td>
+        <td class="price-cell">-</td>
+        <td>
+            <select class="leverage-select">
+                <option value="10">10</option><option value="15">15</option><option value="20">20</option>
+                <option value="25">25</option><option value="30">30</option><option value="35">35</option>
+                <option value="40">40</option><option value="45">45</option><option value="50">50</option>
+            </select>
+        </td>
+        <td>
+            <select class="account-size-select">
+                <option value="100">100</option><option value="125">125</option><option value="150">150</option>
+                <option value="175">175</option><option value="200">200</option><option value="225">225</option>
+                <option value="250">250</option><option value="275">275</option><option value="300">300</option>
+                <option value="325">325</option><option value="350">350</option><option value="375">375</option>
+                <option value="400">400</option><option value="425">425</option><option value="450">450</option>
+                <option value="475">475</option><option value="500">500</option>
+            </select>
+        </td>
+        <td>
+             <select class="target-profit-select">
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                        <option value="35">35</option>
+                        <option value="40">40</option>
+                        <option value="45">45</option>
+                        <option value="50">50</option>
+                        <option value="50">60</option>
+                        <option value="50">70</option>
+                        <option value="50">80</option>
+                        <option value="50">90</option>
+                        <option value="50">100</option>
+                        <option value="50">150</option>
+                        <option value="50">200</option>
+                        <option value="50">300</option>
+                        <option value="50">500</option>
+                    </select>
+        </td>
+        <td class="position-size-cell">-</td>
+        <td class="quantity-cell">-</td>
+        <td class="tg-long-cell">-</td>
+        <td class="liq-long-cell">-</td>
+        <td class="tg-short-cell">-</td>
+        <td class="liq-short-cell">-</td>
+    `;
+
+            // Add row to table
+            tbody.appendChild(tr);
+
+            // Initialize the new row with calculations
+            initializeRow(tr);
+
+            // Clear input
+            input.value = '';
+
+            const SERVER = 'http://localhost:3000';
+            document.querySelectorAll('.calculator-row').forEach(row => initializeRow(row));
+
+            function initializeRow(row) {
+                const rowNum = row.dataset.row;
+                const symbol = row.dataset.symbol;
+                const cells = {
+                    price: row.querySelector('.price-cell'),
+                    leverage: row.querySelector('.leverage-select'),
+                    accountSize: row.querySelector('.account-size-select'),
+                    targetProfit: row.querySelector('.target-profit-select'),
+                    positionSize: row.querySelector('.position-size-cell'),
+                    quantity: row.querySelector('.quantity-cell'),
+                    tgLong: row.querySelector('.tg-long-cell'),
+                    liqLong: row.querySelector('.liq-long-cell'),
+                    tgShort: row.querySelector('.tg-short-cell'),
+                    liqShort: row.querySelector('.liq-short-cell')
+                };
+
+                let currentPrice = NaN;
+                let currentPositionSize = NaN;
+
+                async function updatePrice() {
+                    cells.price.textContent = 'Loading.';
+                    try {
+                        const res = await fetch(`${SERVER}/futures/${encodeURIComponent(symbol)}`);
+                        const data = await res.json();
+                        if (!res.ok || data.error) throw new Error(data.error || 'API error');
+                        currentPrice = parseFloat(data.price) || NaN;
+                        cells.price.textContent = Number.isFinite(currentPrice) ?
+                            currentPrice.toLocaleString(undefined, { maximumFractionDigits: 5 }) : 'N/A';
+                    } catch (err) {
+                        console.error(`Row ${rowNum} fetch error:`, err);
+                        currentPrice = NaN;
+                        cells.price.textContent = 'Error';
+                    }
+                    recalcAll();
+                }
+
+                function calculatePositionSize() {
+                    const acc = parseFloat(cells.accountSize.value) || 0;
+                    const lev = parseFloat(cells.leverage.value) || 0;
+                    const pos = acc * lev;
+                    currentPositionSize = Number.isFinite(pos) ? pos : NaN;
+                    cells.positionSize.textContent = Number.isFinite(pos) ? pos.toLocaleString(undefined, { maximumFractionDigits: 2 }) : '-';
+                }
+
+                function calculateQuantity() {
+                    if (Number.isFinite(currentPositionSize) && Number.isFinite(currentPrice) && currentPrice > 0) {
+                        const qty = currentPositionSize / currentPrice;
+                        cells.quantity.textContent = qty.toLocaleString(undefined, { maximumFractionDigits: 5 });
+                    } else {
+                        cells.quantity.textContent = '-';
+                    }
+                }
+
+                function calculateTargetsAndLiquidation() {
+                    const entry = currentPrice;
+                    const targetUSDT = parseFloat(cells.targetProfit.value) || 0;
+                    const quantity = parseFloat(cells.quantity.textContent.replace(/,/g, '')) || 0;
+                    const lev = parseFloat(cells.leverage.value) || 0;
+
+                    if (Number.isFinite(entry) && entry > 0 && quantity > 0 && targetUSDT > 0) {
+                        const priceChangeForTarget = targetUSDT / quantity;
+                        const tgLong = entry + priceChangeForTarget;
+                        const tgShort = entry - priceChangeForTarget;
+                        cells.tgLong.textContent = tgLong.toLocaleString(undefined, { maximumFractionDigits: 5 });
+                        cells.tgShort.textContent = tgShort.toLocaleString(undefined, { maximumFractionDigits: 5 });
+                    } else {
+                        cells.tgLong.textContent = '-';
+                        cells.tgShort.textContent = '-';
+                    }
+
+                    if (Number.isFinite(entry) && entry > 0 && lev > 1) {
+                        const liqLong = entry * (1 - 1 / lev);
+                        const liqShort = entry * (1 + 1 / lev);
+                        cells.liqLong.textContent = liqLong.toLocaleString(undefined, { maximumFractionDigits: 8 });
+                        cells.liqShort.textContent = liqShort.toLocaleString(undefined, { maximumFractionDigits: 8 });
+                    } else {
+                        cells.liqLong.textContent = '-';
+                        cells.liqShort.textContent = '-';
+                    }
+                }
+
+                function recalcAll() {
+                    calculatePositionSize();
+                    calculateQuantity();
+                    calculateTargetsAndLiquidation();
+                }
+
+                // events
+                cells.leverage.addEventListener('change', recalcAll);
+                cells.accountSize.addEventListener('change', recalcAll);
+                cells.targetProfit.addEventListener('change', recalcAll);
+
+                // initial fetch + periodic update
+                updatePrice();
+                setInterval(updatePrice, 10000);
+            }
+        }
+
+        // Add keyboard support for input
+        document.getElementById('newCoinInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                addNewCoin();
+            }
+
+
+        });
+
+
     </script>
+
 </body>
 
 </html>
