@@ -16,9 +16,9 @@
 }
 
 .trello-table th {
-  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  background: #08bbbb;
   font-weight: 600;
-  color: #1a273b;
+  color: #fcfcfc;
   text-transform: uppercase;
   font-size: 0.85em;
   letter-spacing: 0.5px;
@@ -30,10 +30,11 @@
 .trello-table td {
   background-color: white;
   transition: all 0.2s ease;
+
 }
 
 .calculator-row:hover td {
-  background-color: #f8f9fa;
+  background-color: #074788;
 }
 
 .trello-table select {
@@ -73,8 +74,8 @@
   overflow: hidden;
 }
 
-.calculator-row:nth-child(even) td {
-  background-color: #f9fafc;
+.calculator-row:nth-child(odd) td {
+  background-color: #b6f5dd;
 }
 
 .calculator-row:nth-child(even):hover td {
