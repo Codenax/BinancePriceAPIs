@@ -1,29 +1,41 @@
-const express = require("express");
-const axios = require("axios");
-const cors = require("cors");
-
+const express = require('express');
+const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
-app.use(express.json());
+// CORS allow
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
 
-// Example endpoint: /price?symbol=BTCUSDT
-app.get("/price", async (req, res) => {
-  const symbol = req.query.symbol;
-  if (!symbol) return res.status(400).json({ error: "Symbol is required" });
+// Binance Futures Spot/Perpetual price endpoint
+app.get('/futures/:symbol', async (req, res) => {
+  const symbol = req.params.symbol.toUpperCase();
+  const url = `https://fapi.binance.com/fapi/v1/ticker/price?symbol=${symbol}`;
 
   try {
-    const response = await axios.get(`https://fapi.binance.com/fapi/v1/ticker/price?symbol=${symbol}`);
-    res.json({
-      symbol: response.data.symbol,
-      price: response.data.price
-    });
+    const response = await axios.get(url);
+    res.json({ symbol: response.data.symbol, price: response.data.price });
   } catch (error) {
-    res.status(500).json({ error: "Error fetching price", details: error.message });
+    console.error(error.message);
+    res.status(500).json({ error: 'Cannot fetch data from Binance Futures API' });
+  }
+});
+
+// Optional: list all Futures symbols
+app.get('/futures', async (req, res) => {
+  const url = `https://fapi.binance.com/fapi/v1/exchangeInfo`;
+  try {
+    const response = await axios.get(url);
+    const symbols = response.data.symbols.map(s => s.symbol);
+    res.json({ symbols });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ error: 'Cannot fetch Futures symbols' });
   }
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Binance Futures proxy server running on port ${PORT}`);
 });
