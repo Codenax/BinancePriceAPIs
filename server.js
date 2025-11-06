@@ -1,3 +1,4 @@
+// ...existing code...
 const express = require('express');
 const axios = require('axios');
 const app = express();
@@ -24,6 +25,21 @@ app.get('/spot/:symbol', async (req, res) => {
   }
 });
 
+// Binance USDT-M Futures Price Endpoint
+// Example: GET /futures/BTCUSDT
+app.get('/futures/:symbol', async (req, res) => {
+  const symbol = req.params.symbol.toUpperCase();
+  const url = `https://fapi.binance.com/fapi/v1/ticker/price?symbol=${symbol}`;
+
+  try {
+    const response = await axios.get(url);
+    res.json({ symbol: response.data.symbol, price: response.data.price });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ error: 'Cannot fetch data from Binance Futures API' });
+  }
+});
+
 // Optional: List some popular spot symbols
 app.get('/spot', async (req, res) => {
   const url = `https://api.binance.com/api/v3/exchangeInfo`;
@@ -42,3 +58,4 @@ app.get('/spot', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Binance Spot proxy server running on port ${PORT}`);
 });
+// ...existing code...

@@ -1,0 +1,87 @@
+.trello-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f4f5f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.trello-table th,
+.trello-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border: 1px solid #e0e4e9;
+}
+
+.trello-table th {
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  font-weight: 600;
+  color: #1a273b;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.trello-table td {
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.calculator-row:hover td {
+  background-color: #f8f9fa;
+}
+
+.trello-table select {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.trello-table select:hover {
+  border-color: #80bdff;
+}
+
+.trello-table select:focus {
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.market-select {
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.price-cell,
+.position-size-cell,
+.quantity-cell,
+.tg-long-cell,
+.liq-long-cell,
+.tg-short-cell,
+.liq-short-cell {
+  font-family: "Consolas", monospace;
+  text-align: right;
+  overflow: hidden;
+}
+
+.calculator-row:nth-child(even) td {
+  background-color: #f9fafc;
+}
+
+.calculator-row:nth-child(even):hover td {
+  background-color: #f8f9fa;
+}
+
+.trello-table {
+  table-layout: fixed;
+  overflow: hidden;
+}
