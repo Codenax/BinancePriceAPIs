@@ -30,7 +30,6 @@
 .trello-table td {
   background-color: white;
   transition: all 0.2s ease;
-
 }
 
 .calculator-row:hover td {
@@ -85,4 +84,23 @@
 .trello-table {
   table-layout: fixed;
   overflow: hidden;
+}
+.coin-name {
+  font-weight: bold;
+  color: #484a4b;
+}
+
+tbody .tg-long-cell{
+  color: #074788;
+  font-weight: bold;
+}
+
+tbody .tg-short-cell{
+  color: #6b0466;
+  font-weight: bold;
+}
+
+tbody .liq-long-cell, tbody .liq-short-cell {
+  color:  rgb(182, 1, 1);
+  font-weight: bold;
 }
